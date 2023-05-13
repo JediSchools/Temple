@@ -18,8 +18,7 @@ jobs:
   
   dev-job:
     environment: Dev
-    runs-on: ubuntu-latest    
-    if: ${{ github.environment }} == 'Dev'
+    runs-on: ubuntu-latest
     steps:
       - run: echo "${{ vars.ENV_VAL }}"  >> $GITHUB_STEP_SUMMARY
       
