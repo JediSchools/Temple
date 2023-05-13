@@ -4,7 +4,7 @@ on:
       - main
   pull_request:
     branches:
-      - ci/*
+      - ci/**
 
 name: environment test
 
@@ -12,6 +12,7 @@ jobs:
   live-job:
     environment: Live
     runs-on: ubuntu-latest
+    if: ${{ github.environment }} == 'Live'
     steps:
       - run: echo "${{ vars.ENV_VAL }}"  >> $GITHUB_STEP_SUMMARY
   
