@@ -12,14 +12,14 @@ jobs:
   live-job:
     environment: Live
     runs-on: ubuntu-latest
-    if: ${{ github.environment }} == "Live"
+    if: ${{ github.environment }} == 'Live'
     steps:
       - run: echo "${{ vars.ENV_VAL }}"  >> $GITHUB_STEP_SUMMARY
   
   dev-job:
     environment: Dev
     runs-on: ubuntu-latest    
-    if: ${{ github.environment }} != "Live"
+    if: ${{ github.environment }} == 'Dev'
     steps:
       - run: echo "${{ vars.ENV_VAL }}"  >> $GITHUB_STEP_SUMMARY
       
