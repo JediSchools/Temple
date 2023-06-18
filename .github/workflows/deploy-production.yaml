@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Production deployment
+
+jobs:
+  live-job:
+    environment: Live
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ vars.ENV_VAL }}"  >> $GITHUB_STEP_SUMMARY

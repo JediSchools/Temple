@@ -1,4 +1,4 @@
 # Temple
-A public repository for all future jedis to congregate around
+A public repository for all future Jedis to congregate around
 
-Welcome all
+Welcome all, may the force be with you
