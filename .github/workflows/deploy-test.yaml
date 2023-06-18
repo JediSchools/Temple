@@ -1,0 +1,13 @@
+on:
+  pull_request:
+
+name: Test Deployment test
+
+jobs:
+  
+  dev-job:
+    environment: Dev
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ vars.ENV_VAL }}"  >> $GITHUB_STEP_SUMMARY
+      
